@@ -60,4 +60,4 @@ docker run -p 9000:9000 ml-deployment
 
 ## API Usage
 
-Once the API is running, you can access the interactive Swagger UI documentation at `http://localhost:9000/docs`.
+Once the API is running, you can access the interactive Swagger UI documentation at `http://localhost:9000/predict`.
