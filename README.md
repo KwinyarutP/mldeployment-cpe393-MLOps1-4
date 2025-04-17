@@ -1,28 +1,71 @@
-# mldeployment-cpe393
+# ML Deployment Project
 
-# model export
-Run train.py. (model.pkl will be saved in app folder)
+This repository contains materials for the MLOps Course(CPE393) **Exercise 1-4** which focusing on deploying machine learning models as APIs.
 
-# Go to the directory in terminal
-cd "project folder directory"
+## Overview
 
-# Build Docker image
-docker build -t ml-model .
+This project demonstrates how to create, package, and deploy machine learning models as REST APIs. It covers the entire MLOps workflow from model training to deployment and testing.
 
-# Run Docker container
-docker run -p 9000:9000 ml-model
+## 📁 Repository Structure
+- `train.py`: Script to train the model and export it as `model.pkl`.
+- `app/`: Contains the FastAPI application to serve the model.
+- `Dockerfile`: Instructions for containerizing the app.
+- `requirements.txt`: Python dependencies.
+- `pic_ans/`: Contains screenshots showing the API request running successfully in Exercise 1-4.
 
-# Test the API in new terminal
+## API Screenshots
 
-curl -X POST http://localhost:9000/predict \
-     -H "Content-Type: application/json" \
-     -d '{"features": [[5.1, 3.5, 1.4, 0.2], [6.2, 3.4, 5.4, 2.3]]}'
+The `pic_ans/` folder contains screenshots demonstrating successful API requests and responses in Exercise 1-4. These images provide visual verification that the API is functioning correctly with various test cases.
 
-curl -X GET http://localhost:9000/health
+## Setup and Installation
 
-expected output
+1. Clone the repository:
+   ```
+   git clone https://github.com/KwinyarutP/mldeployment-cpe393-MLOps1-4.git
+   cd mldeployment-cpe393-MLOps1-4
+   ```
 
-{"prediction": 0}
+2. Create and activate a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
+## Training the Model
 
+To train the model and generate the `model.pkl` file:
+
+```
+python train.py
+```
+
+## Running the API
+
+### With Docker
+
+Build the Docker image:
+```
+docker build -t ml-deployment .
+```
+
+Run the container:
+```
+docker run -p 9000:9000 ml-deployment
+```
+
+## API Usage
+
+Once the API is running, you can access the interactive Swagger UI documentation at `http://localhost:9000/docs`.
+
+## Technologies Used
+
+- Python
+- FastAPI for API development
+- Scikit-learn for ML models
+- Docker for containerization
+- GitHub Actions for CI/CD 
