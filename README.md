@@ -16,7 +16,9 @@ docker run -p 9000:9000 ml-model
 
 curl -X POST http://localhost:9000/predict \
      -H "Content-Type: application/json" \
-     -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+     -d '{"features": [[5.1, 3.5, 1.4, 0.2], [6.2, 3.4, 5.4, 2.3]]}'
+
+curl -X GET http://localhost:9000/health
 
 expected output
 

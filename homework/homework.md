@@ -50,7 +50,7 @@ Allow the `/predict` endpoint to accept a list of inputs.
 
 **Task:**  
 Ensure that:
-- The "features" key exists
+- The "features" key exists//
 - Each input has exactly 4 float values
 - Invalid input returns a clear error message with HTTP 400
 
