@@ -1,10 +1,10 @@
-# ML Deployment Project
+# ML Deployment Project (Exercise 1-4)
 
-This repository contains materials for the MLOps Course(CPE393) **Exercise 1-4** which focusing on deploying machine learning models as APIs.
+This repository contains materials for the MLOps Course(CPE393) **Exercise 1-4** which focusing on deploying machine learning models as APIs. However, the Exercise 5 https://github.com/KwinyarutP/house_prediction-MLOps5
 
 ## Overview
 
-This project demonstrates how to create, package, and deploy machine learning models as REST APIs. It covers the entire MLOps workflow from model training to deployment and testing.
+This project demonstrates how to create, package and deploy machine learning models as REST APIs. It covers the entire MLOps workflow from model training to deployment and testing.
 
 ## 📁 Repository Structure
 - `train.py`: Script to train the model and export it as `model.pkl`.
@@ -61,11 +61,3 @@ docker run -p 9000:9000 ml-deployment
 ## API Usage
 
 Once the API is running, you can access the interactive Swagger UI documentation at `http://localhost:9000/docs`.
-
-## Technologies Used
-
-- Python
-- FastAPI for API development
-- Scikit-learn for ML models
-- Docker for containerization
-- GitHub Actions for CI/CD 
